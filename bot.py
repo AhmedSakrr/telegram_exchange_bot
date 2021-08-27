@@ -4,7 +4,7 @@ import time
 import os
 # import matplotlib.pyplot as plt
 
-bot = telebot.TeleBot("1879123480:AAHvsZlgb8NSvlmRqDAPCT0ZhKxXvFpWKiU", parse_mode=None)
+bot = telebot.TeleBot("1879123480:AAHvsZlgb8NSvlmRqDAPCT0ZhKxXvFpWKiU")
 
 # ссылка на апи, куда будет отправлен запрос для курсов валют /list
 exchange_url = 'http://api.exchangeratesapi.io/latest'
@@ -19,7 +19,7 @@ key = {'access_key': 'b5357d8b0b5f3ad4bad0c2f93a10d6c2',
 
 # файл в который будут сохранены все курсы валют из запроса
 # FILE = r'C:\Users\artem\Desktop\bot'
-FILE = os.path.join(os.path.abspath(__file__), 'db_dir')
+FILE = os.path.join(os.path.abspath(os.curdir), 'db_dir', 'exchange_list')
 
 # переменная для сохранения времени предведущего запроса в unix time
 REQUESTS_TIME = 0.0
